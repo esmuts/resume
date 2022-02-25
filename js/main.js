@@ -11,7 +11,7 @@ let typeSpeed = 100;
 $(document).ready(function () {
   // Scroll to top of typewriter section on load
   $("html, body").animate({
-    scrollTop: $("#typewriter").offset().top,
+    scrollTop: $("#typewriter").offset(),
   });
   // Menu hamburger animation
   $(".menu-button").click(() => {

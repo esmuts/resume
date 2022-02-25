@@ -413,6 +413,8 @@ ul {
 
   #about p {
     text-align: left;
+    margin-top: 0;
+    margin-left: 2rem;
   }
 
   #work {
