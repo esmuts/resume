@@ -179,7 +179,7 @@ header {
 
 #work {
   grid-column: 2 / 12;
-  grid-row: 4 / 11;
+  grid-row: 4 / 10;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -222,7 +222,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2.5rem;
 }
 
 footer a {
@@ -458,14 +458,5 @@ footer a {
     .menu-display {
       width: 25%;
     }
-  }
-
-  #typebox {
-    font-size: 2rem;
-    line-height: 4rem;
-  }
-
-  #work {
-    padding: 1rem;
   }
 }

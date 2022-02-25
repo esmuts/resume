@@ -159,7 +159,7 @@ header {
 /* Work CSS */
 #work {
   grid-column: 2/12;
-  grid-row: 4/11;
+  grid-row: 4/10;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -200,7 +200,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2.5rem;
 }
 
 footer a {
@@ -430,14 +430,5 @@ ul {
 @media screen and (min-width: 1200px) {
   .menu-open .menu-display {
     width: 25%;
-  }
-
-  #typebox {
-    font-size: 2rem;
-    line-height: 4rem;
-  }
-
-  #work {
-    padding: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
