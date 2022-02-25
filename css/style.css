@@ -200,7 +200,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 2.5rem;
+  padding-bottom: 3rem;
 }
 
 footer a {
@@ -397,7 +397,7 @@ ul {
   }
 
   #typebox p {
-    font-size: calc(1rem + 1.5vw);
+    font-size: calc(1rem + 1.2vw);
   }
 
   #about {
@@ -427,7 +427,7 @@ ul {
     visibility: visible;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) and (orientation: landscape) {
   .menu-open .menu-display {
     width: 25%;
   }
