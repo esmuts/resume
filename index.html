@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eckard Smuts CV</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Google Font (Roboto Mono)-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Kit -->
+    <script
+      src="https://kit.fontawesome.com/256a67095b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Menu -->
+    <header>
+      <div class="menu">
+        <div class="menu-button">
+          <div class="menu-bar" id="bar1"></div>
+          <div class="menu-bar" id="bar2"></div>
+          <div class="menu-bar" id="bar3"></div>
+        </div>
+        <ul class="menu-display">
+          <li>
+            <a id="about-link">About</a>
+          </li>
+          <li>
+            <a id="work-link">Work</a>
+          </li>
+          <li>
+            <a id="contact-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Typewriter -->
+    <div id="typebox">
+      <p class="cursor" id="typewriter"></p>
+    </div>
+
+    <!-- About -->
+    <div id="about">
+      <img id="profile-img" src="assets/profile1.jpeg" alt="at the beach" />
+      <p>
+        I love the sea, books, and writing.
+        <br />
+        Keen chess player.
+        <br />
+        Father and husband.
+        <br />
+        <br />
+        Full stack web development student at
+        <em>
+          <a href="https://www.hyperiondev.com" target="_blank">HyperionDev</a>.
+        </em>
+        <br />
+        <br />
+        <i id="location-pin" class="fas fa-map-marker-alt"></i>
+        Cape Town
+      </p>
+    </div>
+
+    <!-- Work -->
+    <div id="work">
+      <div id="border-draw-box1"></div>
+      <div id="border-draw-box2"></div>
+      <div id="work-content">
+        <p>
+          I'm enrolled in a full stack web development course at one of South
+          Africa's leading
+          <a href="https://www.hyperiondev.com" target="_blank"
+            >coding schools</a
+          >. The course covers: <br />
+        </p>
+        <br />
+        <ul>
+          <li>JavaScript</li>
+          <li>HTML</li>
+          <li>CSS/SASS</li>
+          <li>Java</li>
+          <li>SQL</li>
+          <li>PHP</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>MongoDB</li>
+        </ul>
+        <br />
+        <p>
+          Find me on
+          <a href="https://github.com/esmuts" target="_blank">GitHub</a>, to see
+          some of the work we've been doing.
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <footer id="contact">
+      <a id="gmail" href="mailto:eckardsmuts@gmail.com">
+        <i class="far fa-envelope fa-2x"></i>
+      </a>
+      <a id="github" href="https://github.com/esmuts" target="_blank">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      <a
+        id="linkedin"
+        href="https://www.linkedin.com/in/eckard-smuts-7a315117/"
+        target="_blank"
+      >
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+    </footer>
+
+    <!-- JavaScipt-->
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+<!--
+ *  Thanks to the following people:
+ *
+ *  CodeSTACKr for a useful approach to the hamburger animation method –
+ *  https://github.com/codeSTACKr/hamburger-animation/blob/master/style.css
+ *  Josh W. Comeau for an excellent guide to keyframes –
+ *  https://www.joshwcomeau.com/animation/keyframe-animations/
+ *  W3 Schools has a useful typewriter snippet, on which I drew for my own –
+ *  https://www.w3schools.com/howto/howto_js_typewriter.asp
+ *  Jamie Juliver & Chris Coyler for useful guides to fluid text –
+ *  https://blog.hubspot.com/website/responsive-text
+ *  https://css-tricks.com/simplified-fluid-typography/
+-->

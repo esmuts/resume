@@ -1,0 +1,1 @@
+This is a single-page online resume for my coding activities. My aim was to play around with some basic animations in a minimalist design framework, but also to build a functional resume page from scratch that I can use and update as I start working on more projects.

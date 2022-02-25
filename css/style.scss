@@ -1,0 +1,471 @@
+/* Color variables */
+
+$field: #272727;
+$primary: #faf7ff;
+$secondary: #d3fbd8;
+$tertiary: #8685ef;
+
+/* Breakpoint variables */
+
+$x-small: 321px;
+$small: 576px;
+$medium: 708px;
+$large: 992px;
+$x-large: 1200px;
+
+/* Global CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  height: 130vh;
+  background-color: $field;
+  font-family: "Roboto Mono", monospace;
+}
+
+p,
+ul {
+  font-size: calc(0.5rem + 2vw);
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $secondary;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header CSS */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $field;
+  z-index: 10;
+}
+
+.menu {
+  margin: 2.5vh;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.menu-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.menu-bar {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  border-radius: 5px;
+  background-color: $primary;
+  transition: all 0.4s ease;
+}
+
+.menu-display {
+  display: flex;
+  justify-content: space-around;
+  width: 0%;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+#bar1 {
+  transform: translateY(-10px);
+}
+
+#bar3 {
+  transform: translateY(+10px);
+}
+
+// Menu animation
+.menu-open {
+  #bar1 {
+    transform: rotate(225deg);
+  }
+
+  #bar2 {
+    background: transparent;
+  }
+
+  #bar3 {
+    transform: rotate(-225deg);
+  }
+
+  .menu-display {
+    width: 80%;
+  }
+}
+
+/* Typewriter CSS */
+
+.cursor::after {
+  content: "_";
+  color: $secondary;
+  animation: blink 1s step-end infinite;
+}
+
+#typebox {
+  grid-column: 1 / 13;
+  grid-row: 2 / 4;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  line-height: 2rem;
+  color: $secondary;
+}
+
+// Cursor animation keyframe
+
+@keyframes blink {
+  50% {
+    color: transparent;
+  }
+}
+
+/* About CSS */
+
+#about {
+  grid-column: 2 / 12;
+  grid-row: 4 / 11;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0;
+}
+
+#profile-img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+#about p {
+  text-align: center;
+  color: $primary;
+}
+
+// Class used to toggle between About and Work sections.
+.hide-display {
+  visibility: hidden;
+}
+
+/* Work CSS */
+
+#work {
+  grid-column: 2 / 12;
+  grid-row: 4 / 11;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: $primary;
+  border: 2px solid;
+}
+
+#work-content {
+  padding: 1rem;
+  opacity: 0;
+}
+
+#work-content ul {
+  padding-left: 1.5rem;
+}
+
+#work a {
+  color: $secondary;
+}
+
+// Boxes shrink to reveal content
+#border-draw-box1,
+#border-draw-box2 {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  left: -3px;
+  right: -3px;
+  margin: auto;
+  background-color: $field;
+  z-index: 5;
+}
+
+/* Footer CSS */
+
+footer {
+  grid-column: 1 / 13;
+  grid-row: 12;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
+
+footer a {
+  position: absolute;
+}
+
+#gmail {
+  transform: translateX(-3.3rem);
+}
+
+#linkedin {
+  transform: translateX(+3.3rem);
+}
+
+// Add class to animate Contact icons
+
+.grow-icon {
+  animation: grow 0.3s ease-out alternate 2;
+}
+
+// Contact icons animation keyframe
+
+@keyframes grow {
+  0% {
+    font-size: 1rem;
+  }
+  100% {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsive CSS */
+
+@media screen and (min-width: $x-small) {
+  @media screen and (orientation: portrait) {
+    body {
+      height: 135vh;
+    }
+
+    p,
+    ul {
+      font-size: calc(0.55rem + 2vw);
+    }
+  }
+
+  @media screen and (orientation: landscape) {
+    body {
+      height: 300vh;
+    }
+
+    #about {
+      grid-column: 4 / 10;
+    }
+
+    #work {
+      grid-column: 4 / 10;
+    }
+  }
+
+  p,
+  ul {
+    font-size: calc(0.55rem + 1.5vw);
+  }
+
+  .menu {
+    margin: 3.5vh;
+  }
+
+  .menu-open {
+    .menu-display {
+      width: 70%;
+    }
+  }
+
+  #typebox {
+    grid-column: 2 / 12;
+    padding-top: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #typebox p {
+    font-size: calc(0.75rem + 2vw);
+    line-height: 2.3rem;
+  }
+
+  #about {
+    grid-column: 3 / 11;
+  }
+
+  #work {
+    grid-column: 3 / 11;
+  }
+}
+
+@media screen and (min-width: $small) {
+  .menu-open {
+    .menu-display {
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (min-width: $medium) {
+  @media screen and (orientation: landscape) {
+    body {
+      height: 250vh;
+    }
+
+    .menu {
+      margin: 5vh;
+    }
+
+    p,
+    ul {
+      font-size: calc(0.5rem + 1.3vw);
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    body {
+      height: 100vh;
+    }
+
+    .menu {
+      margin: 4vh;
+    }
+
+    .menu-open {
+      .menu-display {
+        width: 50%;
+      }
+    }
+  }
+
+  #typebox {
+    grid-row: 3 / 5;
+    padding: 0;
+  }
+
+  #typebox p {
+    font-size: calc(1rem + 2vw);
+    line-height: 4rem;
+  }
+
+  #profile-img {
+    width: 55%;
+  }
+
+  p,
+  ul {
+    font-size: calc(0.5rem + 1.5vw);
+  }
+
+  #work {
+    grid-row: 5 / 11;
+    padding: 1rem;
+  }
+
+  #about {
+    grid-row: 5 / 11;
+    gap: 3rem;
+  }
+}
+
+@media screen and (min-width: $large) and (orientation: portrait) {
+  #typebox {
+    font-size: 2.5rem;
+    line-height: 4.5rem;
+  }
+}
+
+@media screen and (min-width: $large) and (orientation: landscape) {
+  body {
+    height: 100vh;
+  }
+
+  .menu {
+    margin: 5vh;
+  }
+
+  .menu-open {
+    .menu-display {
+      width: 35%;
+    }
+  }
+
+  p,
+  ul {
+    font-size: calc(0.25rem + 0.9vw);
+  }
+
+  #typebox {
+    grid-column: 2 / 8;
+    grid-row: 3 / 5;
+    padding: 0;
+  }
+
+  #typebox p {
+    font-size: calc(1rem + 1.5vw);
+  }
+
+  #about {
+    grid-column: 2 / 8;
+    grid-row: 5 / 11;
+    flex-direction: row;
+  }
+
+  #profile-img {
+    height: 50%;
+    width: auto;
+  }
+
+  #about p {
+    text-align: left;
+  }
+
+  #work {
+    grid-column: 9 / 12;
+    grid-row: 3 / 11;
+    padding: 0;
+  }
+
+  // Neutralise display hide between 'About' and 'Work' by changing class
+  // properties
+  .hide-display {
+    visibility: visible;
+  }
+}
+
+@media screen and (min-width: $x-large) {
+  .menu-open {
+    .menu-display {
+      width: 25%;
+    }
+  }
+
+  #typebox {
+    font-size: 2rem;
+    line-height: 4rem;
+  }
+
+  #work {
+    padding: 1rem;
+  }
+}
