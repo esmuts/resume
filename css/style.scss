@@ -153,7 +153,6 @@ header {
   grid-row: 4 / 11;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   align-items: center;
   overflow: hidden;
   opacity: 0;
@@ -168,6 +167,7 @@ header {
 #about p {
   text-align: center;
   color: $primary;
+  margin-top: 2rem;
 }
 
 // Class used to toggle between About and Work sections.
@@ -359,8 +359,7 @@ footer a {
   }
 
   #typebox {
-    grid-row: 3 / 5;
-    padding: 0;
+    grid-row: 2 / 4;
   }
 
   #typebox p {
@@ -384,7 +383,6 @@ footer a {
 
   #about {
     grid-row: 5 / 11;
-    gap: 3rem;
   }
 }
 

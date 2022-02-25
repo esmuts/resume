@@ -8,8 +8,11 @@ let typeCounter = 0;
 let typeSpeed = 100;
 
 // Main scripting sequence
-
 $(document).ready(function () {
+  // Scroll to top of typewriter section on load
+  $("html, body").animate({
+    scrollTop: $("#typewriter").offset().top,
+  });
   // Menu hamburger animation
   $(".menu-button").click(() => {
     $(".menu").toggleClass("menu-open");

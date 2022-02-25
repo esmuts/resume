@@ -134,7 +134,6 @@ header {
   grid-row: 4/11;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   align-items: center;
   overflow: hidden;
   opacity: 0;
@@ -150,6 +149,7 @@ header {
 #about p {
   text-align: center;
   color: #faf7ff;
+  margin-top: 2rem;
 }
 
 .hide-display {
@@ -335,8 +335,7 @@ ul {
 }
 @media screen and (min-width: 708px) {
   #typebox {
-    grid-row: 3/5;
-    padding: 0;
+    grid-row: 2/4;
   }
 }
 @media screen and (min-width: 708px) {
@@ -365,7 +364,6 @@ ul {
 @media screen and (min-width: 708px) {
   #about {
     grid-row: 5/11;
-    gap: 3rem;
   }
 }
 @media screen and (min-width: 992px) and (orientation: portrait) {
