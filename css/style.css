@@ -322,7 +322,7 @@ ul {
 }
 @media screen and (min-width: 708px) and (orientation: portrait) {
   body {
-    height: 100vh;
+    height: 120vh;
   }
 
   .menu {
