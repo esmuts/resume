@@ -1,7 +1,7 @@
 // Variables
 
 const TYPE_LINE1 = "Hello, I'm Eckard.";
-const TYPE_LINE2 = "I'm learning how to code.";
+const TYPE_LINE2 = "I'm a full stack web developer.";
 
 let cursorPosition = 0;
 let typeCounter = 0;
